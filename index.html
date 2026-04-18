@@ -66,7 +66,6 @@
     transition: background var(--transition), color var(--transition);
   }
 
-  /* PARTICLES */
   #particles-canvas {
     position: fixed; top: 0; left: 0;
     width: 100%; height: 100%;
@@ -74,7 +73,6 @@
     opacity: 0.4;
   }
 
-  /* INTRO SPLASH */
   #intro {
     position: fixed; inset: 0; z-index: 200;
     background: var(--bg);
@@ -122,7 +120,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 0 5%; height: 72px;
@@ -159,7 +156,6 @@
     transform: translateY(-2px);
   }
 
-  /* Animated Theme Toggle */
   .theme-toggle {
     background: var(--line2); border: 1px solid var(--line);
     width: 40px; height: 40px; border-radius: 50%;
@@ -167,9 +163,7 @@
     position: relative; overflow: hidden; color: var(--text);
     transition: background 0.3s, transform 0.3s;
   }
-  .theme-toggle:hover {
-    background: var(--line); transform: scale(1.05);
-  }
+  .theme-toggle:hover { background: var(--line); transform: scale(1.05); }
   .theme-toggle svg {
     position: absolute; width: 20px; height: 20px;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
@@ -200,12 +194,10 @@
   }
   .mobile-nav a:hover { color: var(--accent); }
 
-  /* VIEWS */
   .view-section { display: none; }
   .view-section.active { display: block; animation: fadeInView 0.5s ease; }
   @keyframes fadeInView { from { opacity: 0; } to { opacity: 1; } }
 
-  /* HERO */
   #home {
     min-height: 100vh;
     display: flex; flex-direction: column;
@@ -242,9 +234,7 @@
     opacity: 0; animation: slideUp 0.9s ease 3.2s forwards;
   }
   .hero-divider .line { width: 80px; height: 1px; background: var(--line); }
-  .hero-divider .cross-dot {
-    width: 8px; height: 8px; background: var(--accent); border-radius: 50%;
-  }
+  .hero-divider .cross-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
   .hero-quote {
     font-family: var(--ff-serif); font-style: italic;
     font-size: clamp(16px,1.8vw,20px); color: var(--text3);
@@ -252,7 +242,6 @@
     opacity: 0; animation: slideUp 0.9s ease 3.4s forwards;
   }
 
-  /* SECTION BASE */
   section { position: relative; z-index: 1; }
   .section-inner { max-width: 1200px; margin: 0 auto; padding: 100px 5%; }
   
@@ -282,7 +271,6 @@
   }
   .section-body.visible { opacity: 1; transform: translateY(0); }
 
-  /* TIMELINE COMPONENT (Unified for About, Singapore Mission & Church History) */
   .history-timeline {
     position: relative;
     padding-left: 36px;
@@ -324,7 +312,6 @@
     box-shadow: 0 0 0 4px var(--accent-pale2);
   }
 
-  /* Timeline Variant: Card (Used in Singapore Mission timeline) */
   .tl-card {
     background: var(--surface); border: 1px solid var(--line);
     border-radius: var(--radius); box-shadow: var(--shadow);
@@ -335,13 +322,11 @@
     transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--accent-pale2);
   }
 
-  /* Timeline Variant: Simple */
   .tl-simple { padding-top: 2px; }
   .tl-simple .tl-year { margin-bottom: 8px; }
   .tl-simple .tl-title { font-size: 19px; margin-bottom: 8px; }
   .tl-simple .tl-desc { font-size: 15px; line-height: 1.6; }
 
-  /* Common Text in Timelines */
   .tl-year {
     font-family: var(--ff-sans); font-size: 13px; letter-spacing: 0.15em;
     text-transform: uppercase; color: var(--accent); font-weight: 600;
@@ -350,7 +335,6 @@
   .tl-title { font-family: var(--ff-serif); font-size: 22px; color: var(--text); margin-bottom: 12px; font-weight: 600; line-height: 1.3; }
   .tl-desc { font-family: var(--ff-sans); font-size: 15px; color: var(--text2); line-height: 1.6; }
 
-  /* ABOUT */
   #about { background: var(--bg); }
   .about-grid { 
     display: grid; 
@@ -392,7 +376,6 @@
     line-height: 1.7; color: var(--text2);
   }
 
-  /* SCHEDULE */
   #schedule { background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); }
 
   .schedule-intro {
@@ -458,7 +441,6 @@
   }
   .location-text a:hover { transform: translateX(4px); }
 
-  /* HAPPENINGS */
   #happenings { background: var(--bg); }
 
   .announcement-grid {
@@ -501,7 +483,6 @@
   }
   .btn-outline:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 6px 20px var(--accent-pale2); }
 
-  /* CONNECT */
   #connect { background: var(--bg2); text-align: center; border-top: 1px solid var(--line2); }
   .connect-intro {
     font-family: var(--ff-serif); font-style: italic;
@@ -546,6 +527,133 @@
   }
   .coord-name { font-family: var(--ff-serif); font-size: 26px; color: var(--text); font-weight: 600; }
   .coord-title { font-family: var(--ff-serif); font-style: italic; font-size: 17px; color: var(--text2); margin-top: 8px; }
+
+  /* ====== LITURGICAL CALENDAR ====== */
+  #calendar { background: var(--bg); border-top: 1px solid var(--line2); }
+
+  .cal-intro {
+    font-family: var(--ff-serif); font-style: italic;
+    font-size: clamp(16px,1.8vw,20px); color: var(--text2);
+    line-height: 1.8; max-width: 640px; margin-top: 20px;
+  }
+
+  .cal-key {
+    display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px;
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+  }
+  .cal-key.visible { opacity: 1; transform: translateY(0); }
+  .cal-key-item {
+    display: flex; align-items: center; gap: 8px;
+    font-family: var(--ff-sans); font-size: 12px; color: var(--text3); font-weight: 500;
+  }
+  .cal-key-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  }
+  .cal-key-dot.lord { background: var(--accent); }
+  .cal-key-dot.mary { background: #7b5ea7; }
+  .cal-key-dot.apostle { background: var(--gold); }
+  .cal-key-dot.fast { background: var(--forest-light); }
+  .cal-key-dot.church { background: #3a7aa8; }
+
+  .cal-months {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+  }
+  .cal-month {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: var(--shadow);
+    overflow: hidden;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow var(--transition), border-color var(--transition);
+  }
+  .cal-month.visible { opacity: 1; transform: translateY(0); }
+  .cal-month:hover { box-shadow: var(--shadow-hover); border-color: var(--accent-pale2); }
+  .cal-month-header {
+    background: var(--bg2); border-bottom: 1px solid var(--line);
+    padding: 18px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .cal-month-name {
+    font-family: var(--ff-serif); font-size: 20px; font-weight: 600; color: var(--text);
+  }
+  .cal-month-season {
+    font-family: var(--ff-sans); font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--text3); font-weight: 600;
+  }
+  .cal-month-body { padding: 8px 0; }
+  .cal-entry {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 12px 24px; border-bottom: 1px solid var(--line2);
+    transition: background 0.2s;
+  }
+  .cal-entry:last-child { border-bottom: none; }
+  .cal-entry:hover { background: var(--bg2); }
+  .cal-entry-date {
+    font-family: var(--ff-sans); font-size: 12px; font-weight: 700;
+    color: var(--text3); min-width: 36px; padding-top: 2px;
+  }
+  .cal-entry-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 5px;
+  }
+  .cal-entry-dot.lord { background: var(--accent); }
+  .cal-entry-dot.mary { background: #7b5ea7; }
+  .cal-entry-dot.apostle { background: var(--gold); }
+  .cal-entry-dot.fast { background: var(--forest-light); }
+  .cal-entry-dot.church { background: #3a7aa8; }
+  .cal-entry-info {}
+  .cal-entry-name {
+    font-family: var(--ff-serif); font-size: 15px; color: var(--text); font-weight: 500; line-height: 1.4;
+  }
+  .cal-entry-note {
+    font-family: var(--ff-sans); font-size: 12px; color: var(--text3); margin-top: 2px; line-height: 1.4;
+  }
+  .cal-entry-badge {
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--accent-pale2); color: var(--accent);
+    padding: 2px 8px; border-radius: 10px; font-weight: 700;
+    margin-left: 6px; vertical-align: middle; white-space: nowrap;
+  }
+  .cal-entry-badge.gold { background: rgba(156,127,70,0.15); color: var(--gold); }
+  .cal-entry-badge.green { background: rgba(78,143,71,0.15); color: var(--forest-light); }
+  .cal-entry-badge.purple { background: rgba(123,94,167,0.12); color: #7b5ea7; }
+
+  .cal-fasts-block {
+    margin-top: 48px; padding: 40px 40px;
+    border: 1px solid var(--line); background: var(--surface);
+    border-radius: var(--radius); box-shadow: var(--shadow);
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+  }
+  .cal-fasts-block.visible { opacity: 1; transform: translateY(0); }
+  .cal-fasts-block h3 {
+    font-family: var(--ff-serif); font-size: 26px; color: var(--text); font-weight: 600; margin-bottom: 8px;
+  }
+  .cal-fasts-block .subtitle {
+    font-family: var(--ff-serif); font-style: italic; font-size: 16px; color: var(--text2); margin-bottom: 28px;
+  }
+  .fasts-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;
+  }
+  .fast-item {
+    padding: 20px 24px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--bg2);
+  }
+  .fast-item-label {
+    font-family: var(--ff-sans); font-size: 10px; letter-spacing: 0.15em; font-weight: 700;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .fast-item-label.canonical { color: var(--accent); }
+  .fast-item-label.pious { color: var(--gold); }
+  .fast-item-label.special { color: var(--forest-light); }
+  .fast-item-name {
+    font-family: var(--ff-serif); font-size: 16px; color: var(--text); font-weight: 600; margin-bottom: 4px;
+  }
+  .fast-item-dates {
+    font-family: var(--ff-sans); font-size: 13px; color: var(--text2); line-height: 1.5;
+  }
 
   /* HISTORY PAGE STYLES */
   .page-header {
@@ -652,6 +760,12 @@
   .ivanios-portrait-caption { padding: 16px 20px; border-top: 1px solid var(--line); background: var(--surface); font-family: var(--ff-serif); font-style: italic; font-size: 14px; color: var(--text3); text-align: center; line-height: 1.5; }
   
   .ivanios-dates { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+  .date-pill {
+    font-family: var(--ff-sans); font-size: 11px; letter-spacing: 0.1em; font-weight: 600;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
+    background: var(--accent-pale2); color: var(--accent);
+  }
+  .date-pill.purple { background: rgba(123,94,167,0.12); color: #7b5ea7; }
   .ivanios-title-main { font-family: var(--ff-serif); font-size: clamp(32px,4vw,48px); font-weight: 500; color: var(--text); line-height: 1.15; margin-bottom: 12px; }
   .ivanios-subtitle { font-family: var(--ff-serif); font-style: italic; font-size: 20px; color: var(--accent); margin-bottom: 24px; }
   .ivanios-body { font-family: var(--ff-sans); font-size: 17px; line-height: 1.7; color: var(--text2); }
@@ -667,11 +781,9 @@
   .blockquote-block blockquote { font-family: var(--ff-serif); font-style: italic; font-size: 22px; line-height: 1.7; color: var(--text); }
   .blockquote-block cite { display: block; margin-top: 20px; font-family: var(--ff-sans); font-size: 12px; letter-spacing: 0.15em; font-weight: 600; text-transform: uppercase; color: var(--text3); font-style: normal; }
 
-  /* ANIMATE */
   .animate-fade { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1), transform 0.7s cubic-bezier(0.25, 1, 0.5, 1); }
   .animate-fade.visible { opacity: 1; transform: translateY(0); }
 
-  /* FOOTER */
   footer {
     border-top: 1px solid var(--line); padding: 40px 5%;
     display: flex; align-items: center; justify-content: space-between;
@@ -689,6 +801,8 @@
     footer { flex-direction: column; gap: 16px; text-align: center; }
     .blockquote-block { padding: 32px 24px; }
     .about-grid, .schedule-grid, .announcement-grid { grid-template-columns: 1fr; }
+    .cal-months { grid-template-columns: 1fr; }
+    .cal-fasts-block { padding: 28px 20px; }
   }
 </style>
 </head>
@@ -711,20 +825,17 @@
       <li><a onclick="switchView('main', 'about')">About</a></li>
       <li><a onclick="switchView('main', 'schedule')">Schedule</a></li>
       <li><a onclick="switchView('main', 'happenings')">Happenings</a></li>
+      <li><a onclick="switchView('main', 'calendar')">Calendar</a></li>
       <li><a onclick="switchView('main', 'connect')">Connect</a></li>
       <li><a onclick="switchView('history')" class="nav-history-link">History</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
       <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
       </svg>
       <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -741,6 +852,7 @@
   <a onclick="switchView('main', 'about'); closeMobileNav()">About</a>
   <a onclick="switchView('main', 'schedule'); closeMobileNav()">Schedule</a>
   <a onclick="switchView('main', 'happenings'); closeMobileNav()">Happenings</a>
+  <a onclick="switchView('main', 'calendar'); closeMobileNav()">Calendar</a>
   <a onclick="switchView('main', 'connect'); closeMobileNav()">Connect</a>
   <a onclick="switchView('history'); closeMobileNav()">History</a>
 </div>
@@ -808,8 +920,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="6" r="3.5"></circle>
               <path d="M7 11h10v2a5 5 0 0 1-10 0v-2z"></path>
-              <path d="M12 18v4"></path>
-              <path d="M8 22h8"></path>
+              <path d="M12 18v4"></path><path d="M8 22h8"></path>
             </svg>
             Holy Mass
           </div>
@@ -822,8 +933,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="6" r="3.5"></circle>
               <path d="M7 11h10v2a5 5 0 0 1-10 0v-2z"></path>
-              <path d="M12 18v4"></path>
-              <path d="M8 22h8"></path>
+              <path d="M12 18v4"></path><path d="M8 22h8"></path>
             </svg>
             Holy Mass
           </div>
@@ -836,16 +946,11 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="9" r="2.5"></circle>
               <circle cx="12" cy="9" r="5"></circle>
-              <path d="M12 1v2"></path>
-              <path d="M12 15v2"></path>
-              <path d="M4 9h2"></path>
-              <path d="M18 9h2"></path>
-              <path d="M6.3 3.3l1.4 1.4"></path>
-              <path d="M16.3 14.7l1.4 1.4"></path>
-              <path d="M6.3 14.7l1.4-1.4"></path>
-              <path d="M16.3 3.3l1.4 1.4"></path>
-              <path d="M12 17v5"></path>
-              <path d="M9 22h6"></path>
+              <path d="M12 1v2"></path><path d="M12 15v2"></path>
+              <path d="M4 9h2"></path><path d="M18 9h2"></path>
+              <path d="M6.3 3.3l1.4 1.4"></path><path d="M16.3 14.7l1.4 1.4"></path>
+              <path d="M6.3 14.7l1.4-1.4"></path><path d="M16.3 3.3l1.4 1.4"></path>
+              <path d="M12 17v5"></path><path d="M9 22h6"></path>
             </svg>
             Devotion
           </div>
@@ -905,9 +1010,559 @@
     </div>
   </section>
 
+  <!-- LITURGICAL CALENDAR 2026 -->
+  <section id="calendar">
+    <div class="section-inner">
+      <div class="section-label animate-on-scroll">05 — Liturgical Year</div>
+      <h2 class="section-heading animate-on-scroll">Liturgical<br><em>Calendar 2026</em></h2>
+      <p class="cal-intro animate-on-scroll">The sacred seasons, feasts, and commemorations of the Syro Malankara Catholic Church for the year 2026 — based on the official Panchangom issued by the Major Archiepiscopal Curia.</p>
+
+      <div class="cal-key animate-on-scroll">
+        <div class="cal-key-item"><div class="cal-key-dot lord"></div> Feasts of Our Lord</div>
+        <div class="cal-key-item"><div class="cal-key-dot mary"></div> Feasts of Our Lady</div>
+        <div class="cal-key-item"><div class="cal-key-dot apostle"></div> Apostles & Saints</div>
+        <div class="cal-key-item"><div class="cal-key-dot fast"></div> Seasons of Fast</div>
+        <div class="cal-key-item"><div class="cal-key-dot church"></div> Church Commemorations</div>
+      </div>
+
+      <div class="cal-months">
+
+        <!-- JANUARY -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">January</div>
+            <div class="cal-month-season">Yaldo · Denho Season</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jan 1</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Circumcision of Our Lord <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Gzoorto — New Year's Day</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jan 6</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Denho — Baptism of Our Lord <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Epiphany — a Feast of Our Lord</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jan 26</div>
+              <div class="cal-entry-dot fast"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Nineveh Fast begins <span class="cal-entry-badge green">Fast</span></div>
+                <div class="cal-entry-note">Three-Days Nombu: 26–29 January 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEBRUARY -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">February</div>
+            <div class="cal-month-season">Denho · Great Lent</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Feb 2</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Mayaltho — Presentation of Our Lord <span class="cal-entry-badge">Feast</span></div>
+                <div class="cal-entry-note">Entrance of Our Lord into the Temple</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Feb 15</div>
+              <div class="cal-entry-dot fast"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Great Lent begins <span class="cal-entry-badge green">Fast</span></div>
+                <div class="cal-entry-note">Fifty-Days Nombu: 15 Feb – 5 April 2026</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Feb 16</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Commemoration of All Departed Priests</div>
+                <div class="cal-entry-note">Kohne — First Sunday of Lent</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Feb 23</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Commemoration of All Departed Faithful</div>
+                <div class="cal-entry-note">Aneede — Second Sunday of Lent</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MARCH -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">March</div>
+            <div class="cal-month-season">Great Lent</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Mar 2</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Wedding at Cana — 1st Sunday of Great Fast</div>
+                <div class="cal-entry-note">Kothine — beginning of Our Lord's ministry</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Mar 18</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Mid-Lent — Erection of the Cross</div>
+                <div class="cal-entry-note">Wednesday of the 4th week; Phelgo d-Sawmo</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Mar 25</div>
+              <div class="cal-entry-dot mary"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Suboro — Annunciation to the Blessed Virgin Mary <span class="cal-entry-badge purple">Solemnity</span></div>
+                <div class="cal-entry-note">Observed even in Lent; Holy Qurbana obligatory</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- APRIL -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">April</div>
+            <div class="cal-month-season">Holy Week · Easter</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Apr 3</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Raising of Lazarus</div>
+                <div class="cal-entry-note">Saturday before Palm Sunday</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Apr 4</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Hosanna — Palm Sunday <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Ooshaané — beginning of Passion Week</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Apr 8</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Maundy Thursday — Pesach <span class="cal-entry-badge">Holy Day</span></div>
+                <div class="cal-entry-note">Institution of the Holy Qurbona; all must receive</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Apr 9</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Good Friday <span class="cal-entry-badge">Holy Day</span></div>
+                <div class="cal-entry-note">Great Friday of the Crucifixion; strict fast & abstinence</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Apr 5</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Qyomtho — Easter Sunday <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">The Resurrection of Our Lord; centre of the liturgical year</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAY -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">May</div>
+            <div class="cal-month-season">Paschal Season · Ascension</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">May 3</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St Philip the Apostle <span class="cal-entry-badge gold">Apostle</span></div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">May 8</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St John the Apostle <span class="cal-entry-badge gold">Apostle</span></div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">May 14</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Sulokho — Ascension of Our Lord <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Sixth Thursday after Easter; Holy Qurbana obligatory</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">May 24</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Pentecost — Fiftieth Day Feast <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Descent of the Holy Spirit; Holy Qurbana obligatory</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUNE -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">June</div>
+            <div class="cal-month-season">Ordinary Time · Sleeha Fast</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jun 16</div>
+              <div class="cal-entry-dot fast"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Apostles' Fast begins <span class="cal-entry-badge green">Pious Fast</span></div>
+                <div class="cal-entry-note">Sleeha Nombu: 16–29 June 2026</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jun 24</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Birth of St John the Baptist</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jun 29</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Sts Peter and Paul <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Holy Qurbana obligatory; end of Apostles' Fast</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JULY -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">July</div>
+            <div class="cal-month-season">St Thomas · Mar Ivanios</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jul 1–15</div>
+              <div class="cal-entry-dot fast"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Mar Ivanios Fast <span class="cal-entry-badge green">Special Fast</span></div>
+                <div class="cal-entry-note">Observed for the canonization cause of Ven. Mar Ivanios</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jul 3</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Dukrono — Martyrdom of St Thomas <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Feast of our founding Apostle; Holy Qurbana obligatory</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jul 15</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Commemoration of Ven. Archbishop Mar Ivanios <span class="cal-entry-badge">Memorial</span></div>
+                <div class="cal-entry-note">Death anniversary; Holy Qurbana obligatory</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Jul 25</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St James the Greater <span class="cal-entry-badge gold">Apostle</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AUGUST -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">August</div>
+            <div class="cal-month-season">M'thale · Shunoyo</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Aug 1–15</div>
+              <div class="cal-entry-dot fast"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Fast of the Mother of God <span class="cal-entry-badge green">Pious Fast</span></div>
+                <div class="cal-entry-note">Sunoyo Nombu: 1–15 August 2026</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Aug 6</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">M'thale — Transfiguration of Our Lord <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">A Feast of Our Lord; begins the M'thale season</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Aug 15</div>
+              <div class="cal-entry-dot mary"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Shunoyo — Assumption of the Mother of God <span class="cal-entry-badge purple">Solemnity</span></div>
+                <div class="cal-entry-note">Holy Qurbana obligatory; end of the Sunoyo Nombu</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Aug 24</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St Bartholomew the Apostle <span class="cal-entry-badge gold">Apostle</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEPTEMBER -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">September</div>
+            <div class="cal-month-season">Sleebo Season</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Sep 1–8</div>
+              <div class="cal-entry-dot fast"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Eight-Days Fast <span class="cal-entry-badge green">Pious Fast</span></div>
+                <div class="cal-entry-note">1–8 September 2026</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Sep 8</div>
+              <div class="cal-entry-dot mary"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Nativity of the Blessed Virgin Mary</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Sep 14</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Sleebo — Exaltation of the Holy Cross <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Discovery of the Cross by St Helen; begins Sleebo season</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Sep 20</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Anniversary of the Malankara Reunion <span class="cal-entry-badge">Memorial</span></div>
+                <div class="cal-entry-note">20 September 1930 — reunion with Rome</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Sep 21</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St Matthew the Apostle <span class="cal-entry-badge gold">Apostle</span></div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Sep 21</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Birthday of Ven. Archbishop Mar Ivanios</div>
+                <div class="cal-entry-note">Born 21 September 1882</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OCTOBER -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">October</div>
+            <div class="cal-month-season">Sleebo · New Year</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Oct 18</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St Luke the Evangelist</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Oct 28</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St Simon the Zealot & St Jude the Apostle <span class="cal-entry-badge gold">Apostle</span></div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Nov 1</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Qudos Eetho — Sanctification of the Church <span class="cal-entry-badge">New Year</span></div>
+                <div class="cal-entry-note">First Sunday of the Malankara Liturgical Year 2026–27</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOVEMBER -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">November</div>
+            <div class="cal-month-season">New Liturgical Year</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Nov 1</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Qudos Eetho — Feast of All Saints</div>
+                <div class="cal-entry-note">Sanctification of the Church; new liturgical year begins</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Nov 8</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Hudos Eetho — Renewal of the Church</div>
+                <div class="cal-entry-note">Second Sunday of the new liturgical year</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Nov 30</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St Andrew the Apostle <span class="cal-entry-badge gold">Apostle</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DECEMBER -->
+        <div class="cal-month">
+          <div class="cal-month-header">
+            <div class="cal-month-name">December</div>
+            <div class="cal-month-season">Suboro · Nativity Fast</div>
+          </div>
+          <div class="cal-month-body">
+            <div class="cal-entry">
+              <div class="cal-entry-date">Dec 1</div>
+              <div class="cal-entry-dot fast"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Twenty-Five Days Fast begins <span class="cal-entry-badge green">Fast</span></div>
+                <div class="cal-entry-note">Nativity Fast: 1–25 December 2026</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Dec 8</div>
+              <div class="cal-entry-dot mary"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Immaculate Conception of the Blessed Virgin Mary</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Dec 21</div>
+              <div class="cal-entry-dot apostle"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">St Thomas the Apostle — Kerala Tradition</div>
+                <div class="cal-entry-note">Additional observance in the Indian tradition</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Dec 25</div>
+              <div class="cal-entry-dot lord"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Yaldo — Nativity of Our Lord <span class="cal-entry-badge">Solemnity</span></div>
+                <div class="cal-entry-note">Holy Qurbana obligatory; end of the Nativity Fast</div>
+              </div>
+            </div>
+            <div class="cal-entry">
+              <div class="cal-entry-date">Dec 27</div>
+              <div class="cal-entry-dot church"></div>
+              <div class="cal-entry-info">
+                <div class="cal-entry-name">Holy Innocents of Bethlehem</div>
+                <div class="cal-entry-note">Commemoration of the infants martyred by Herod</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end cal-months -->
+
+      <!-- FASTS SUMMARY -->
+      <div class="cal-fasts-block animate-on-scroll">
+        <h3>Seasons of Fasting — 2026</h3>
+        <p class="subtitle">As given in the official Panchangom of the Syro Malankara Catholic Church</p>
+        <div class="fasts-grid">
+          <div class="fast-item">
+            <div class="fast-item-label canonical">Canonical Fast</div>
+            <div class="fast-item-name">Nineveh Nombu</div>
+            <div class="fast-item-dates">26–29 January 2026<br>Three-Days Fast; meat abstinence</div>
+          </div>
+          <div class="fast-item">
+            <div class="fast-item-label canonical">Canonical Fast</div>
+            <div class="fast-item-name">Great Lent (Fifty-Days Nombu)</div>
+            <div class="fast-item-dates">15 February – 5 April 2026<br>Stricter abstinence on Fridays; no fish/egg from Good Friday</div>
+          </div>
+          <div class="fast-item">
+            <div class="fast-item-label pious">Pious Fast</div>
+            <div class="fast-item-name">Apostles' Fast (Sleeha Nombu)</div>
+            <div class="fast-item-dates">16–29 June 2026<br>Thirteen-Days Fast; not binding under law</div>
+          </div>
+          <div class="fast-item">
+            <div class="fast-item-label pious">Pious Fast</div>
+            <div class="fast-item-name">Fast of the Mother of God</div>
+            <div class="fast-item-dates">1–15 August 2026<br>Fifteen-Days Nombu; ends with Shunoyo</div>
+          </div>
+          <div class="fast-item">
+            <div class="fast-item-label pious">Pious Fast</div>
+            <div class="fast-item-name">Eight-Days Fast</div>
+            <div class="fast-item-dates">1–8 September 2026</div>
+          </div>
+          <div class="fast-item">
+            <div class="fast-item-label special">Special Fast</div>
+            <div class="fast-item-name">Mar Ivanios Fast</div>
+            <div class="fast-item-dates">1–15 July 2026<br>For the canonization cause of Ven. Mar Ivanios</div>
+          </div>
+          <div class="fast-item">
+            <div class="fast-item-label canonical">Canonical Fast</div>
+            <div class="fast-item-name">Nativity Fast (Twenty-Five Days Nombu)</div>
+            <div class="fast-item-dates">1–25 December 2026<br>Preparation for the Feast of Yaldo</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <section id="connect">
     <div class="section-inner">
-      <div class="section-label animate-on-scroll">04 — Reach Us</div>
+      <div class="section-label animate-on-scroll">06 — Reach Us</div>
       <h2 class="section-heading animate-on-scroll">Connect with<br><em>our mission</em></h2>
       <p class="connect-intro animate-on-scroll">Follow our journey, get in touch, or simply say a prayer for our growing community.</p>
 
@@ -1160,21 +1815,21 @@
             </div>
             <p style="font-family:var(--ff-serif);font-style:italic;font-size:13px;color:var(--text3);text-align:center">Archbishop<br>Geevarghese Mar Ivanios</p>
           </div>
-          <div class="ivanios-portrait-caption">Archbishop Geevarghese Mar Ivanios · Servant of God · 1882–1953</div>
+          <div class="ivanios-portrait-caption">Archbishop Geevarghese Mar Ivanios · Venerable · 1882–1953</div>
         </div>
 
         <div>
           <div class="ivanios-dates">
             <span class="date-pill">Born 1882</span>
             <span class="date-pill">Died 1953</span>
-            <span class="date-pill">Servant of God</span>
+            <span class="date-pill purple">Venerable</span>
           </div>
           <div class="ivanios-title-main">Archbishop Geevarghese<br>Mar Ivanios</div>
           <div class="ivanios-subtitle">Founder of the Malankara Reunion Movement</div>
           <div class="ivanios-body">
             <p>Born P.T. Geevarghese in 1882 at Puthiyakavu in Kerala, Mar Ivanios was a theologian, visionary, and mystic whose entire life was devoted to the spiritual unity of the Christian Church. After taking sanyasa and founding the Bethany Ashram in 1919, he embarked on a historic journey toward full communion with Rome.</p>
             <p>On 20 September 1930, alongside Bishop Jacob Mar Theophilos and companions, he made his profession of Catholic faith before the Bishop of Quilon — reuniting the Malankara faithful with the Holy See after nearly three centuries of separation.</p>
-            <p>He subsequently became the first Metropolitan-Archbishop of Trivandrum, tirelessly building up the newly established Syro Malankara Catholic Church until his death on 15 July 1953. The cause for his canonization has been formally opened; he is venerated today as the Servant of God.</p>
+            <p>He subsequently became the first Metropolitan-Archbishop of Trivandrum, tirelessly building up the newly established Syro Malankara Catholic Church until his death on 15 July 1953. His cause for canonization was formally opened in 2007, when he was declared Servant of God. On 14 March 2024, Pope Francis recognised his heroic virtues and conferred upon him the title of <strong>Venerable</strong> — a significant step toward beatification and canonization.</p>
           </div>
         </div>
       </div>
@@ -1188,6 +1843,7 @@
         <div class="milestone-cell"><div class="mc-year">1933</div><div class="mc-text">Enthroned as first Metropolitan-Archbishop of Trivandrum</div></div>
         <div class="milestone-cell"><div class="mc-year">1953</div><div class="mc-text">Passes to eternal rest on 15 July; entombed at St. Mary's Cathedral</div></div>
         <div class="milestone-cell"><div class="mc-year">2007</div><div class="mc-text">Declared Servant of God; cause for canonization formally opened</div></div>
+        <div class="milestone-cell" style="border-color:var(--accent-pale2)"><div class="mc-year" style="color:var(--gold)">2024</div><div class="mc-text">Declared <strong>Venerable</strong> by Pope Francis on 14 March 2024 — heroic virtues recognised</div></div>
       </div>
 
       <div class="blockquote-block animate-fade" style="transition-delay:0.3s">
@@ -1195,7 +1851,7 @@
         <cite>— His Holiness Pope John Paul II, addressing the Syro Malankara Catholic Community, Rome, 2000</cite>
       </div>
 
-      <div style="margin-top:64px" class="animate-fade" style="transition-delay:0.45s">
+      <div style="margin-top:64px" class="animate-fade">
         <div class="church-section-label">Learn More</div>
         <h2 class="church-section-heading" style="margin-bottom:24px">Resources on Archbishop Mar Ivanios</h2>
         <div class="ext-links-grid">
@@ -1224,37 +1880,22 @@
 </footer>
 
 <script>
-  /* VIEW SWITCHER */
   function switchView(viewName, hash = '') {
-    // Hide all views
     document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-    // Show requested view
     document.getElementById('view-' + viewName).classList.add('active');
-    
-    // Scroll handling
     if (hash) {
       const target = document.getElementById(hash);
-      if (target) {
-        window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
-      }
-    } else {
-      window.scrollTo(0, 0);
-    }
-    
-    // Retrigger animations for newly visible elements
+      if (target) { window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' }); }
+    } else { window.scrollTo(0, 0); }
     triggerAnimations();
   }
 
-  /* THEME TOGGLE */
   const themeToggle = document.getElementById('themeToggle');
   themeToggle.addEventListener('click', () => {
     const root = document.documentElement;
-    const currentTheme = root.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    root.setAttribute('data-theme', newTheme);
+    root.setAttribute('data-theme', root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
   });
 
-  /* TABS IN HISTORY VIEW */
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
   tabBtns.forEach(btn => {
@@ -1268,53 +1909,30 @@
     });
   });
 
-  /* INTRO SPLASH */
   setTimeout(() => { document.getElementById('intro').classList.add('hidden'); }, 3000);
 
-  /* RIPPLE EFFECT */
-  document.addEventListener('click', e => {
-    if(e.target.closest('a') || e.target.closest('button') || e.target.closest('svg')) return;
-    const r = document.createElement('div');
-    r.className = 'ripple';
-    r.style.left = e.clientX + 'px';
-    r.style.top = e.clientY + 'px';
-    document.body.appendChild(r);
-    setTimeout(() => r.remove(), 1000);
-  });
-
-  /* NAV SCROLL */
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
 
-  /* MOBILE NAV */
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
   hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
   function closeMobileNav() { mobileNav.classList.remove('open'); }
 
-  /* SCROLL ANIMATIONS */
   function triggerAnimations() {
-    const els = document.querySelectorAll('.animate-on-scroll, .animate-fade, .tl-node');
+    const els = document.querySelectorAll('.animate-on-scroll, .animate-fade, .tl-node, .cal-month');
     const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { 
-        if (e.isIntersecting) { 
-          e.target.classList.add('visible'); 
-          obs.unobserve(e.target); 
-        } 
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
     els.forEach(el => obs.observe(el));
   }
-  // Initialize once on load
   triggerAnimations();
 
-  /* PARTICLES */
   const canvas = document.getElementById('particles-canvas');
   const ctx = canvas.getContext('2d');
   let W, H, particles = [];
-
   function resizeCanvas() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
@@ -1352,12 +1970,10 @@
       ctx.fillStyle = this.color + this.currentOpacity + ')'; ctx.fill();
     }
   }
-
   for (let i = 0; i < 60; i++) {
     const p = new Particle(); p.y = Math.random() * H;
     p.life = Math.floor(Math.random() * p.maxLife); particles.push(p);
   }
-
   function animParticles() {
     ctx.clearRect(0, 0, W, H);
     particles.forEach(p => { p.update(); p.draw(); });
@@ -1365,7 +1981,6 @@
   }
   animParticles();
 
-  /* HERO PARALLAX */
   window.addEventListener('scroll', () => {
     const heroBg = document.querySelector('.hero-bg');
     if (heroBg && document.getElementById('view-main').classList.contains('active')) {
